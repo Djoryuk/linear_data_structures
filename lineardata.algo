@@ -1,0 +1,110 @@
+
+//algorythm 1/1
+ALGORITHM Linear data 1 solution 1
+VAR
+    a,b: ARRAY_OF INTEGER[10];
+    sum_a , sum_b: INTEGER 
+BEGIN
+    a := {6,9,8,2}
+    i := 0 ; 
+    FOR i FROM 1 TO a.length STEP 1 DO
+        sum_a= sum_a + a[i]
+        FOR j FROM 1 TO b.length STEP 1  DO
+            IF (a[i] === b[j] ) THEN
+                sum_a := sum_a - a[i]
+            END_IF
+        END_FOR
+    END_FOR
+    b := {2,4,1,9};
+    FOR j FROM 1 TO b.length STEP 1 DO
+        sum_b := sum_b - b[j];
+        FOR i FROM 1 TO a.length  STEP 1  DO
+            IF (a[i] === b[j]) THEN
+                sum_b = sum_b - b[j]
+            END_IF
+        END_FOR
+    END_FOR
+    write(sum_a + sum_b)
+END
+
+//Algorythm 1/2
+ALGORITHM hashtable 1/2
+VAR
+    h : HASH_TABLE<INTEGER,INTEGER>
+    a : ARRAY_OF [6]
+    count , i , sum : INTEGER;
+BEGIN
+    tab := {1 , 3 , 6 , 5 , 6 , 3 }
+    count := 0;
+    FOR i FROM 1 TO tab.length STEP 1 DO
+        IF (htab.lookup(tab[i]) = TRUE) THEN 
+            count := htab.get(tab[i]); 
+            htab.insert(tab[i], count + 1); 
+        ELSE 
+        htab.insert(tab[i], 1); 
+        END_IF
+    END_FOR
+    sum := 0;
+    FOR i FROM 1 TO tab.length STEP 1  DO
+        IF (htab.get(tab[i]) = 1) THEN
+            sum := sum + tab[i];
+        END_IF
+    END_FOR
+
+    Write(sum);
+
+END
+
+//algorythm2/1
+
+ALGORITHM algorithm_2/1
+VAR
+    a,b: ARRAY_OF INTEGER[10];
+    sum_a , sum_b: INTEGER 
+BEGIN
+    a := {1,5,6,7};
+    FOR i FROM 1 TO tab1.length STEP 1  DO
+        FOR j FROM 1 TO b.length STEP 1  DO
+            IF (a[i] === b[j]) THEN
+                sum_a = sum_a + tab1[m]; 
+            END_IF
+        END_FOR
+    END_FOR
+    b:= {9, 5, 1, 90};
+    FOR j FROM 1 TO b.length STEP 1  DO
+        FOR iFROM 1 TO a.length STEP 1  DO
+            IF (a[i] === b[j]) THEN
+                sum_b = sum_b + tab2[n]; 
+            END_IF
+        END_FOR
+    END_FOR
+    Write(sum_a + sum_b);
+
+END
+//algorythm 2/2
+
+ALGORITHM algorithm_name
+VAR
+    h : HASH_TABLE<INTEGER, INTEGER>;
+    a: ARRAY_OF INTEGER[10]
+    count, i, sum: INTEGER
+BEGIN
+    tab := {5,5,8,9,10,52,55,66,10};
+    count := 0;
+    FOR i FROM 1 TO tab.length STEP 1 DO
+        IF (h.lookup(tab[i]) = TRUE) THEN 
+            count := h.get(tab[i]); 
+            h.insert(tab[i], count + 1); 
+        ELSE 
+        h.insert(tab[i], 1); 
+        END_IF
+    END_FOR
+    
+    sum := 0;
+    FOR i FROM 1 TO tab.length STEP 1  DO
+        IF (h.get(tab[i]) > 1) THEN 
+            sum := sum + tab[i];
+        END_IF
+    END_FOR
+    Write(sum); 
+END
